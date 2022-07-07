@@ -6,4 +6,5 @@
     <string name="cd_favorite">Favorite</string>
     <string name="cd_share_icon">Share Icon</string>
     <string name="txt_open_link">Open LInk</string>
+    <string name="cd_favorite_icon">cd_favorite_icon</string>
 </resources>

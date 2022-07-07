@@ -4,4 +4,5 @@
     <dimen name="defaut_half_margin">8dp</dimen>
 
     <dimen name="news_image_height">160dp</dimen>
+    <dimen name="default_half_margin" />
 </resources>
