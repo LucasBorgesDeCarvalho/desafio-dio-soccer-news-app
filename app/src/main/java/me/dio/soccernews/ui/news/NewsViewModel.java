@@ -1,5 +1,6 @@
 package me.dio.soccernews.ui.news;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -37,7 +38,7 @@ public class NewsViewModel extends ViewModel {
         state.setValue(State.DOING);
         api.getNews().enqueue(new Callback<List<News>>() {
             @Override
-            public void onResponse(Call<List<News>> call, Response<List<News>> response) {
+            public void onResponse(@NonNull Call<List<News>> call, @NonNull Response<List<News>> response) {
                 if (response.isSuccessful()) {
                     news.setValue(response.body());
                     state.setValue(State.DONE);
@@ -47,7 +48,7 @@ public class NewsViewModel extends ViewModel {
             }
 
             @Override
-            public void onFailure(Call<List<News>> call, Throwable t) {
+            public void onFailure(@NonNull Call<List<News>> call, Throwable t) {
                 t.printStackTrace();
                 state.setValue(State.ERROR);
             }
